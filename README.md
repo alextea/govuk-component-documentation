@@ -1,11 +1,20 @@
 # GOV.UK Component Documentation Generator
 
-This tool generates comprehensive documentation for GOV.UK Design System components by processing the component examples and configurations from a local copy of the govuk-frontend repository.
+A Node.js tool that generates comprehensive documentation for GOV.UK Design System components. This tool processes components from the GOV.UK Design System repository and creates a single markdown file containing documentation, code examples, and rendered output for each component.
+
+## Features
+
+- Generates a single, easy-to-navigate markdown file for all components
+- Includes component documentation from source files
+- Shows Nunjucks template code for each component's default example
+- Displays rendered HTML output for each example
+- Provides a table of contents for quick navigation
+- Components are sorted alphabetically for easy reference
 
 ## Prerequisites
 
 - Node.js 16 or higher
-- A local copy of the [GOV.UK Design System repository](https://github.com/alphagov/govuk-frontend)
+- A local copy of the [GOV.UK Design System repository](https://github.com/alphagov/govuk-design-system)
 
 ## Installation
 
@@ -17,39 +26,48 @@ npm install
 
 ## Usage
 
-Run the script by providing the path to your local GOV.UK Design System repository:
+Run the documentation generator by providing the path to your local GOV.UK Design System repository:
 
 ```bash
-npm start /path/to/govuk-frontend
+npm start /path/to/govuk-design-system
 ```
 
 The script will:
-1. Scan the Design System repository for component definitions
-2. Process each component's YAML configuration
-3. Extract examples and their associated templates
-4. Generate a comprehensive markdown file with:
-   - Component descriptions
-   - Parameter documentation
-   - Code examples (both Nunjucks templates and rendered HTML)
-   - Usage guidelines
+1. Scan the Design System repository for components in `src/components/`
+2. Extract documentation from each component's `index.md` file
+3. Process the default example from each component's `default/index.njk` template
+4. Generate a comprehensive markdown file at `docs/components.md`
 
-The generated documentation will be saved to `docs/components.md`.
+## Output Structure
 
-## Output Format
+The generated documentation (`docs/components.md`) includes:
 
-The generated documentation includes:
+- A table of contents linking to all components
+- For each component:
+  - Component name and description from the source documentation
+  - Default example with:
+    - Nunjucks template code
+    - Rendered HTML output
+  - Additional documentation from the component's markdown files
 
-- Component name and description
-- Parameter tables with type information and descriptions
-- Examples with:
-  - Example name and description
-  - Nunjucks template code
-  - Rendered HTML output
+## Dependencies
 
-## Error Handling
+- `glob`: For finding component files
+- `nunjucks`: For rendering component templates
+- `marked`: For processing markdown content
+- `govuk-frontend`: For component macros and templates
 
-The script includes robust error handling and will:
-- Log errors for individual component processing failures
-- Continue processing other components if one fails
-- Provide clear error messages in the console
-- Include error notifications in the generated documentation where applicable
+## Contributing
+
+If you'd like to contribute to this project:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## Related Resources
+
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+- [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend)
+- [GOV.UK Design System Repository](https://github.com/alphagov/govuk-design-system)

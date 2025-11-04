@@ -29,8 +29,27 @@ class ComponentDocumentationGenerator {
                 absolute: true
             });
 
-            let documentation = '# GOV.UK Design System Components\n\n';
+            // Sort components alphabetically
+            componentPaths.sort((a, b) => {
+                return path.basename(a).localeCompare(path.basename(b));
+            });
 
+            let documentation = '# GOV.UK Design System Components\n\n';
+            documentation += '## Table of Contents\n\n';
+
+            // Generate table of contents
+            for (const componentPath of componentPaths) {
+                const componentName = path.basename(componentPath);
+                const displayName = componentName
+                    .split('-')
+                    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(' ');
+                documentation += `- [${displayName}](#${componentName})\n`;
+            }
+
+            documentation += '\n---\n\n';
+
+            // Generate component documentation
             for (const componentPath of componentPaths) {
                 const componentName = path.basename(componentPath);
                 console.log(`Processing component: ${componentName}`);
@@ -53,7 +72,13 @@ class ComponentDocumentationGenerator {
     }
 
     async processComponent(componentPath, componentName) {
-        let componentDoc = `## ${componentName}\n\n`;
+        // Create display name with proper capitalization
+        const displayName = componentName
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+        
+        let componentDoc = `## ${displayName} {#${componentName}}\n\n`;
 
         try {
             // Read the component's markdown documentation

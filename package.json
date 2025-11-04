@@ -1,0 +1,25 @@
+{
+  "name": "govuk-component-documentation-generator",
+  "version": "1.0.0",
+  "description": "Documentation generator for GOV.UK Design System components",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "govuk",
+    "design-system",
+    "documentation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^10.3.10",
+    "js-yaml": "^4.1.0",
+    "marked": "^11.0.0",
+    "nunjucks": "^3.2.4",
+    "govuk-frontend": "^5.0.0"
+  }
+}

@@ -1,0 +1,53 @@
+# GOV.UK Frontend for coding agents
+
+> Reference for building pages with the GOV.UK Frontend (v6.6.0) Nunjucks macros and styles, with usage guidance from the GOV.UK Design System.
+
+Read the guide first, then only the component files you need.
+
+## Guides
+
+- [GOV.UK Frontend guide](docs/govuk-frontend-guide.md): progressive enhancement, page template, layout, typography, forms and errors, Prototype Kit
+- [Styles reference](docs/govuk-frontend-styles.md): colours, type scale, spacing, layout and the `govuk-!-` override classes
+- [Full component reference](docs/govuk-frontend-component-reference.md): every component in one file, with a line-numbered table of contents
+
+## Components
+
+- [Accordion](docs/components/accordion.md): `govukAccordion`
+- [Back link](docs/components/back-link.md): `govukBackLink`
+- [Breadcrumbs](docs/components/breadcrumbs.md): `govukBreadcrumbs`
+- [Button](docs/components/button.md): `govukButton`
+- [Character count](docs/components/character-count.md): `govukCharacterCount`
+- [Checkboxes](docs/components/checkboxes.md): `govukCheckboxes`
+- [Cookie banner](docs/components/cookie-banner.md): `govukCookieBanner`
+- [Date input](docs/components/date-input.md): `govukDateInput`
+- [Details](docs/components/details.md): `govukDetails`
+- [Error message](docs/components/error-message.md): `govukErrorMessage`
+- [Error summary](docs/components/error-summary.md): `govukErrorSummary`
+- [Exit this page](docs/components/exit-this-page.md): `govukExitThisPage`
+- [Feedback](docs/components/feedback.md): `govukFeedback`
+- [Fieldset](docs/components/fieldset.md): `govukFieldset`
+- [File upload](docs/components/file-upload.md): `govukFileUpload`
+- [Footer](docs/components/footer.md): `govukFooter`
+- [Generic header](docs/components/generic-header.md): `govukGenericHeader`
+- [Header](docs/components/header.md): `govukHeader`
+- [Hint](docs/components/hint.md): `govukHint`
+- [Input](docs/components/input.md): `govukInput`
+- [Inset text](docs/components/inset-text.md): `govukInsetText`
+- [Label](docs/components/label.md): `govukLabel`
+- [Language navigation](docs/components/language-navigation.md): `govukLanguageNavigation`
+- [Notification banner](docs/components/notification-banner.md): `govukNotificationBanner`
+- [Pagination](docs/components/pagination.md): `govukPagination`
+- [Panel](docs/components/panel.md): `govukPanel`
+- [Password input](docs/components/password-input.md): `govukPasswordInput`
+- [Phase banner](docs/components/phase-banner.md): `govukPhaseBanner`
+- [Radios](docs/components/radios.md): `govukRadios`
+- [Select](docs/components/select.md): `govukSelect`
+- [Service navigation](docs/components/service-navigation.md): `govukServiceNavigation`
+- [Skip link](docs/components/skip-link.md): `govukSkipLink`
+- [Summary list](docs/components/summary-list.md): `govukSummaryList`
+- [Table](docs/components/table.md): `govukTable`
+- [Tabs](docs/components/tabs.md): `govukTabs`
+- [Tag](docs/components/tag.md): `govukTag`
+- [Task list](docs/components/task-list.md): `govukTaskList`
+- [Textarea](docs/components/textarea.md): `govukTextarea`
+- [Warning text](docs/components/warning-text.md): `govukWarningText`

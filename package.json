@@ -13,8 +13,8 @@
     "design-system",
     "documentation"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Alex Torrance",
+  "license": "MIT",
   "dependencies": {
     "glob": "^10.3.10",
     "js-yaml": "^4.1.0",

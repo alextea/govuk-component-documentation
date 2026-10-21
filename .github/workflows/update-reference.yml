@@ -1,0 +1,47 @@
+name: Update component reference
+
+# Weekly, pick up the latest govuk-frontend release and Design System guidance,
+# regenerate the docs, and open a pull request if anything changed.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Update govuk-frontend to the latest release
+        run: npm install govuk-frontend@latest
+
+      - id: version
+        run: echo "govuk-frontend=$(node -p "require('govuk-frontend/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      # Fails if any generated example no longer renders to the fixture HTML
+      - name: Regenerate reference
+        run: npm run reference
+
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: update-component-reference
+          delete-branch: true
+          commit-message: Update component reference for govuk-frontend v${{ steps.version.outputs.govuk-frontend }}
+          title: Update component reference for govuk-frontend v${{ steps.version.outputs.govuk-frontend }}
+          body: |
+            Regenerated with `npm run reference` against govuk-frontend v${{ steps.version.outputs.govuk-frontend }} and the latest Design System guidance.
+
+            Check the diff for new or deprecated parameters. If there is a major version bump, check `docs/govuk-frontend-guide.md` as well, because it's written by hand.

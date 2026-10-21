@@ -1,25 +1,37 @@
 {
-  "name": "govuk-component-documentation-generator",
+  "name": "govuk-component-documentation",
   "version": "1.0.0",
-  "description": "Documentation generator for GOV.UK Design System components",
-  "main": "src/index.js",
-  "type": "module",
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "LLM-friendly documentation for building pages with GOV.UK Frontend Nunjucks components, with a generator to keep it up to date",
   "keywords": [
     "govuk",
+    "govuk-frontend",
     "design-system",
-    "documentation"
+    "nunjucks",
+    "documentation",
+    "llm",
+    "ai-agents"
   ],
+  "homepage": "https://github.com/alextea/govuk-component-documentation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alextea/govuk-component-documentation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alextea/govuk-component-documentation/issues"
+  },
   "author": "Alex Torrance",
   "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "reference": "node src/generate-reference.js --guidance --verify",
+    "test": "node src/generate-reference.js --verify --dry-run"
+  },
   "dependencies": {
-    "glob": "^10.3.10",
-    "js-yaml": "^4.1.0",
-    "marked": "^11.0.0",
-    "nunjucks": "^3.2.4",
-    "govuk-frontend": "^5.0.0"
+    "govuk-frontend": "^6.6.0",
+    "nunjucks": "^3.2.4"
   }
 }

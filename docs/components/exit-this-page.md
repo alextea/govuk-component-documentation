@@ -32,7 +32,7 @@ You can also use this component for standalone content pages, such as dashboards
 
 Do not use this component if the service or content is unlikely to put a user at risk. See the [Exit a page quickly pattern](https://design-system.service.gov.uk/patterns/exit-a-page-quickly/) for examples of at-risk and sensitive topics.
 
-The 'Exit this page' component is a [Button component](https://design-system.service.gov.uk/components/button/) that has been marked up with addtional CSS and JavaScript functionality, to make it work in a specific way.
+The 'Exit this page' component is a [Button component](https://design-system.service.gov.uk/components/button/) that has been marked up with additional CSS and JavaScript functionality, to make it work in a specific way.
 
 Keep in mind that seeing this component might discourage certain users from using your service. If the user does not identify themselves as being at risk, they might see the button on a service and decide it’s not relevant to them.
 

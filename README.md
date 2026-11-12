@@ -11,6 +11,7 @@ This documentation references and includes sections of the comprehensive human-f
 | File | What it is |
 | --- | --- |
 | [docs/govuk-frontend-guide.md](docs/govuk-frontend-guide.md) | **Written by hand.** Covers progressive enhancement (based on the [Service Manual](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)), Nunjucks setup, the page template, layout, typography, forms and errors, common page patterns and the Prototype Kit. |
+| [docs/govuk-prototype-kit-guide.md](docs/govuk-prototype-kit-guide.md) | **Written by hand.** Covers research prototypes, scenarios, session data, routes, feedback and lightweight checks for the GOV.UK Prototype Kit. |
 | [docs/govuk-frontend-component-reference.md](docs/govuk-frontend-component-reference.md) | **Generated.** Every component in one file, with a line-numbered table of contents. |
 | [docs/components/](docs/components/) | **Generated.** The same reference with one file per component, so agents only read what they need. |
 | [docs/govuk-frontend-styles.md](docs/govuk-frontend-styles.md) | **Generated.** The Design System's [Styles](https://design-system.service.gov.uk/styles/) guidance, with colours, the type scale, spacing and every `govuk-!-` override class. |
@@ -46,9 +47,10 @@ Copy `docs/` into your project, for example as `docs/govuk/`. Then point your ag
 This project uses GOV.UK Frontend Nunjucks macros.
 
 - Before building or changing a page, read `docs/govuk/govuk-frontend-guide.md`.
+- For GOV.UK Prototype Kit journeys, session data and routes, also read `docs/govuk/govuk-prototype-kit-guide.md`.
 - Before using a component, read its file in `docs/govuk/components/` (for example `docs/govuk/components/radios.md`). Use only the parameters listed there.
 - Use the macros. Do not hand-write component HTML or invent parameters.
-- Follow progressive enhancement. Every page and form must work without JavaScript, with server-side validation and no single-page app.
+- Follow progressive enhancement. Pages and forms must work without JavaScript, using server-handled forms and real navigation links rather than a single-page app. Add validation and error states when the journey needs them.
 - For colours, spacing, typography and `govuk-!-` override classes, check `docs/govuk/govuk-frontend-styles.md`. Never hard-code hex colours.
 ```
 

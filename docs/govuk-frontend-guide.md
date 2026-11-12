@@ -282,13 +282,15 @@ Patterns not covered here are on the [GOV.UK Design System patterns pages](https
 
 ## GOV.UK Prototype Kit
 
+For detailed guidance on prototype journeys, session data, routes and lightweight checks, see the [GOV.UK Prototype Kit guide](govuk-prototype-kit-guide.md).
+
 If the project uses the [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk) (v13 or later):
 
 - Pages go in `app/views/` as `.html` files and extend `layouts/main.html`:
   ```njk
   {% extends "layouts/main.html" %}
   {% block pageTitle %}Question – {{ serviceName }} – GOV.UK Prototype Kit{% endblock %}
-  {% block beforeContent %}{{ govukBackLink({ text: "Back", href: "javascript:window.history.back()" }) }}{% endblock %}
+  {% block beforeContent %}{{ govukBackLink({ text: "Back", href: "/previous-page" }) }}{% endblock %}
   {% block content %}...{% endblock %}
   ```
 - The GOV.UK Frontend macros are already imported, so leave out the `{% from %}` lines.

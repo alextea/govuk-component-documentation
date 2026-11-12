@@ -7,6 +7,7 @@ Read the guide first, then only the component files you need.
 ## Guides
 
 - [GOV.UK Frontend guide](docs/govuk-frontend-guide.md): progressive enhancement, page template, layout, typography, forms and errors, Prototype Kit
+- [GOV.UK Prototype Kit guide](docs/govuk-prototype-kit-guide.md): research prototypes, scenarios, session data, routes and lightweight checks
 - [Styles reference](docs/govuk-frontend-styles.md): colours, type scale, spacing, layout and the `govuk-!-` override classes
 - [Full component reference](docs/govuk-frontend-component-reference.md): every component in one file, with a line-numbered table of contents
 

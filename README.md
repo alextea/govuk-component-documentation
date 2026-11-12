@@ -13,6 +13,7 @@ This documentation references and includes sections of the comprehensive human-f
 | [docs/govuk-frontend-guide.md](docs/govuk-frontend-guide.md) | **Written by hand.** Covers progressive enhancement (based on the [Service Manual](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)), Nunjucks setup, the page template, layout, typography, forms and errors, common page patterns and the Prototype Kit. |
 | [docs/govuk-prototype-kit-guide.md](docs/govuk-prototype-kit-guide.md) | **Written by hand.** Covers research prototypes, scenarios, session data, routes, feedback and lightweight checks for the GOV.UK Prototype Kit. |
 | [docs/govuk-prototype-kit-tutor.md](docs/govuk-prototype-kit-tutor.md) | **Optional, written by hand.** Tool-neutral instructions for coaching designers through learning to code, without writing their solution unless asked. |
+| [docs/govuk-prototype-kit-tutor-setup.md](docs/govuk-prototype-kit-tutor-setup.md) | **Optional, written by hand.** Setup instructions and copy-and-paste examples for Copilot, Claude Code, Cursor, Codex, ChatGPT and Claude. |
 | [docs/govuk-frontend-component-reference.md](docs/govuk-frontend-component-reference.md) | **Generated.** Every component in one file, with a line-numbered table of contents. |
 | [docs/components/](docs/components/) | **Generated.** The same reference with one file per component, so agents only read what they need. |
 | [docs/govuk-frontend-styles.md](docs/govuk-frontend-styles.md) | **Generated.** The Design System's [Styles](https://design-system.service.gov.uk/styles/) guidance, with colours, the type scale, spacing and every `govuk-!-` override class. |
@@ -70,6 +71,8 @@ unless I explicitly ask.
 Adjust the path to wherever you copied the docs. In a chat tool without file access, paste or upload the tutor along with the Prototype Kit guide, Frontend guide and the relevant component or styles references.
 
 This is a portable instruction file, not an installed custom agent. Loading it is optional: keep it out of your default implementation instructions unless you want tutoring as your normal workflow.
+
+For a reusable setup, follow the [tutor setup guide](docs/govuk-prototype-kit-tutor-setup.md). It includes a selectable Copilot agent, a Claude Code skill, a manual Cursor rule, and instructions for Codex and chat projects. The examples reference the same tutor file so its teaching guidance stays in one place.
 
 ### Optional: team conventions
 

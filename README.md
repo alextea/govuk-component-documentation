@@ -12,6 +12,7 @@ This documentation references and includes sections of the comprehensive human-f
 | --- | --- |
 | [docs/govuk-frontend-guide.md](docs/govuk-frontend-guide.md) | **Written by hand.** Covers progressive enhancement (based on the [Service Manual](https://www.gov.uk/service-manual/technology/using-progressive-enhancement)), Nunjucks setup, the page template, layout, typography, forms and errors, common page patterns and the Prototype Kit. |
 | [docs/govuk-prototype-kit-guide.md](docs/govuk-prototype-kit-guide.md) | **Written by hand.** Covers research prototypes, scenarios, session data, routes, feedback and lightweight checks for the GOV.UK Prototype Kit. |
+| [docs/govuk-prototype-kit-tutor.md](docs/govuk-prototype-kit-tutor.md) | **Optional, written by hand.** Tool-neutral instructions for coaching designers through learning to code, without writing their solution unless asked. |
 | [docs/govuk-frontend-component-reference.md](docs/govuk-frontend-component-reference.md) | **Generated.** Every component in one file, with a line-numbered table of contents. |
 | [docs/components/](docs/components/) | **Generated.** The same reference with one file per component, so agents only read what they need. |
 | [docs/govuk-frontend-styles.md](docs/govuk-frontend-styles.md) | **Generated.** The Design System's [Styles](https://design-system.service.gov.uk/styles/) guidance, with colours, the type scale, spacing and every `govuk-!-` override class. |
@@ -54,9 +55,25 @@ This project uses GOV.UK Frontend Nunjucks macros.
 - For colours, spacing, typography and `govuk-!-` override classes, check `docs/govuk/govuk-frontend-styles.md`. Never hard-code hex colours.
 ```
 
+### Optional: learn with a coding tutor
+
+The [Prototype Kit coding tutor](docs/govuk-prototype-kit-tutor.md) helps designers learn through small steps, brief examples and checks in the browser. It can help with setup, screenshots, page and flow descriptions, and troubleshooting. It explains the coding and design concepts rather than building the prototype for you.
+
+To opt in, ask your assistant to read the tutor for your learning session:
+
+```text
+Read docs/govuk/govuk-prototype-kit-tutor.md and act as my coding tutor.
+Help me learn one step at a time. Do not write my solution or change files
+unless I explicitly ask.
+```
+
+Adjust the path to wherever you copied the docs. In a chat tool without file access, paste or upload the tutor along with the Prototype Kit guide, Frontend guide and the relevant component or styles references.
+
+This is a portable instruction file, not an installed custom agent. Loading it is optional: keep it out of your default implementation instructions unless you want tutoring as your normal workflow.
+
 ### Optional: team conventions
 
-These docs only cover building pages. If your team follows the [GDS Way](https://gds-way.digital.cabinet-office.gov.uk/), you can also add its git conventions to the same instructions file, so agents follow them when they commit:
+If your team follows the [GDS Way](https://gds-way.digital.cabinet-office.gov.uk/), you can also add its git conventions to your project instructions file, so agents follow them when they commit:
 
 ```markdown
 ## Git conventions (GDS Way)
